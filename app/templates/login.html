@@ -1,0 +1,39 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+<h2 class="text-center">{{ title }}</h2>
+<hr/>
+
+<form method="POST" action="/login">
+	<div class="row justify-content-center mb-3">
+		<div class="col-sm-6">
+			<label for="email" class="visually-hidden">Email</label>
+			<input type="email" class="form-control" name="email" autofocus="" placeholder="your@email.com">
+		</div>
+	</div>
+
+	<div class="row justify-content-center mb-3">
+		<div class="col-sm-6">
+			<label for="password" class="visually-hidden">Password</label>
+			<input type="password" class="form-control" name="password" placeholder="Password...">
+		</div>
+	</div>
+
+	<div class="row justify-content-center mb-3">
+		<div class="col-sm-6 form-check">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="remember_me">
+				<label class="form-check-label" for="remember_me">
+					Remember me
+				</label>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row justify-content-center">
+		<div class="col-sm-3 d-grid gap-2">
+			<button class="btn btn-primary d-block">Login</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
